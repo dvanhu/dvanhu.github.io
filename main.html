@@ -7,27 +7,20 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Georgia, 'Times New Roman', serif; background-color: white; color: black; line-height: 1.6; font-size: 16px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
         .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 60px; }
         .logo { font-size: 2.5em; font-weight: bold; color: #8B4513; letter-spacing: 3px; }
         .nav-menu { display: flex; gap: 30px; list-style: none; margin-top: 10px; }
         .nav-menu a { text-decoration: none; color: #8B4513; font-size: 1.2em; transition: color 0.3s ease; }
         .nav-menu a:hover { color: #A0522D; }
-        .main-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 80px; }
-        .left-column { padding-right: 40px; }
+        .section { margin-bottom: 80px; }
         .section-title { font-size: 2.2em; color: #8B4513; margin-bottom: 30px; font-weight: normal; }
         .content-text { font-size: 16px; line-height: 1.8; color: black; margin-bottom: 20px; text-align: justify; }
-        .right-column { display: flex; flex-direction: column; gap: 20px; align-items: center; }
-        .gif-placeholder { width: 100%; height: 300px; background-color: #f0f0f0; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; color: #666; font-size: 16px; text-align: center; margin-bottom: 20px; }
-        .small-gif { width: 48%; height: 150px; background-color: #f0f0f0; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px; text-align: center; }
-        .gif-row { display: flex; justify-content: space-between; width: 100%; gap: 4%; }
-        .full-width-section { margin-bottom: 60px; }
         .action-title { font-size: 1.8em; color: #8B4513; margin-bottom: 25px; font-weight: normal; }
         .action-text { font-size: 16px; line-height: 1.8; color: black; margin-bottom: 20px; text-align: justify; }
         .focus-section { margin-top: 40px; }
         .focus-title { font-size: 1.3em; color: black; margin-bottom: 15px; font-weight: bold; }
         .focus-text { font-size: 16px; line-height: 1.8; color: black; text-align: justify; }
-        .contact-section { margin-top: 60px; }
         .contact-title { font-size: 1.8em; color: #8B4513; margin-bottom: 30px; font-weight: normal; }
         .contact-text { font-size: 16px; line-height: 1.8; color: black; margin-bottom: 20px; }
         .contact-text a { color: #8B4513; text-decoration: underline; }
@@ -35,11 +28,7 @@
         @media (max-width: 768px) {
             .header { flex-direction: column; gap: 20px; text-align: center; }
             .nav-menu { justify-content: center; }
-            .main-content { grid-template-columns: 1fr; gap: 40px; }
-            .left-column { padding-right: 0; }
             .logo { font-size: 2em; }
-            .gif-row { flex-direction: column; gap: 20px; }
-            .small-gif { width: 100%; }
         }
     </style>
 </head>
@@ -58,35 +47,21 @@
         </div>
 
         <!-- About Section -->
-        <div class="main-content" id="about">
-            <div class="left-column">
-                <h2 class="section-title">ABOUT</h2>
-                <p class="content-text">
-                    I am Divanshu from Jaipur, originally from Suratgarh, Sri Ganganagar, where I completed my foundational education at Sacred Heart School, specializing in Physics, Chemistry, and Mathematics from 2020 to 2022.
-                </p>
-                <p class="content-text">
-                    Driven by an unwavering passion for technology and innovative problem-solving, I'm currently pursuing my BTech in Computer Science and Engineering at JECRC University. My expertise includes AWS Cloud, Python, GitHub, Linux, and Docker, which I've applied in building cloud storage solutions and web applications.
-                </p>
-                <p class="content-text">
-                    Beyond technology, I maintain deep interests in psychology, philosophy, human behavior, and personal development, which continuously motivate my growth both professionally and personally.
-                </p>
-            </div>
-            <div class="right-column">
-                <div class="gif-placeholder">
-                    <div>
-                        <p>Main GIF/Animation Space</p>
-                        <p style="font-size: 12px; margin-top: 10px;">Portfolio Showcase or Demo</p>
-                    </div>
-                </div>
-                <div class="gif-row">
-                    <div class="small-gif"><p>GIF 1</p></div>
-                    <div class="small-gif"><p>GIF 2</p></div>
-                </div>
-            </div>
+        <div class="section" id="about">
+            <h2 class="section-title">ABOUT</h2>
+            <p class="content-text">
+                I am Divanshu from Jaipur, originally from Suratgarh, Sri Ganganagar, where I completed my foundational education at Sacred Heart School, specializing in Physics, Chemistry, and Mathematics from 2020 to 2022.
+            </p>
+            <p class="content-text">
+                Driven by an unwavering passion for technology and innovative problem-solving, I'm currently pursuing my BTech in Computer Science and Engineering at JECRC University. My expertise includes AWS Cloud, Python, GitHub, Linux, and Docker, which I've applied in building cloud storage solutions and web applications.
+            </p>
+            <p class="content-text">
+                Beyond technology, I maintain deep interests in psychology, philosophy, human behavior, and personal development, which continuously motivate my growth both professionally and personally.
+            </p>
         </div>
 
         <!-- Work Section -->
-        <div class="full-width-section" id="work">
+        <div class="section" id="work">
             <h2 class="action-title">WORK</h2>
             <p class="action-text">
                 I utilize modern technologies to create innovative solutions in cloud computing and software development. My projects focus on building scalable applications that can be used in real-world scenarios, from cloud storage solutions to web applications that serve users efficiently.
@@ -103,7 +78,7 @@
         </div>
 
         <!-- Contact Section -->
-        <div class="contact-section" id="contact">
+        <div class="section" id="contact">
             <h2 class="contact-title">Contact</h2>
             <p class="contact-text">
                 Feel free to reach out through <a href="mailto:divanshu0213@gmail.com">email</a> or connect with me on various platforms. You can find my work and contributions on <a href="https://github.com/dvanhu" target="_blank">GitHub</a>, professional updates on <a href="https://www.linkedin.com/in/dvanhu" target="_blank">LinkedIn</a>, and coding practice on <a href="https://leetcode.com/u/dvanhu/" target="_blank">LeetCode</a>.
